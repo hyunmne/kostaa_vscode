@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li.select{
+            color:red;
+        }
+        .first{
+            background-color: yellow;
+        }
+        input[type="text"] { /* 타입 속성 */
+            background-color: aqua;
+        }
+        input[type="password"]{
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
     <ul>
-        <li class="select">사과</li>
-        <li>바나나</li>
+        <li class="select first">사과</li>
+        <li class="first">바나나</li>
         <li class="select">오렌지</li>
         <li>감</li>
     </ul>
+    <form action="">
+        <input type="text">
+        <input type="password">
+    </form>
 </body>
 </html>
