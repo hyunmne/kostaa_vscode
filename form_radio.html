@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tbody>
+                <tr>
+                    <th><label for="username">이름</label></th>
+                    <td><input type="text" id="username"></td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <!-- label => 라디오버튼 안 누르고 '여자' 글자만 눌러도 선택되게 연결 -->
+                        <!-- label의 for는 id와 같아야 함 -->
+                        <input type="radio" name="gender" value="m" id="man">
+                        <label for="man">남자</label>
+                        <input type="radio" name="gender" value="w" id="woman">
+                        <label for="woman">여자</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>병역</th>
+                    <td>
+                        <input type="radio" name="military" value="x" id="x">
+                        <label for="x">미필</label>
+                        <input type="radio" name="military" value="o" id="o">
+                        <label for="o">군필</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="가입"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
