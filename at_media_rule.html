@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user_scale=no, minimun-scale=1.0">
+    <!-- <viewport content 속성>
+    width=device-width : 화면 너비 크기를 장치 스크린 너비 크기에 맞춤
+    initial-scale : 초기 줌 레벨 조절 비율(0~10:기본 1.0)
+    user-scale : 사용자가 화면 크기 조절 가능 여부(yes or no / 기본 = yes)
+    minimun-scale : 최소 축소 가능 비율 (0~10 / 기본 : 0.25)
+    maximun-scale : 최대 확대 가능 비율 (0~10 / 기본 : 5.0) 
+    ** minimun-scale, maximun-scale 모두 1로 하면 user-scale은 no와 같음 -->
+    <title>Document</title>
+    <style>
+        @media(max-width:499px){
+            body{background-color: red;}
+        }
+        @media(min-width:500px) and (max-width:799px){
+            body{background-color: green;}
+        }
+        @media(min-width:800px) {
+            body{background-color: blue;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea ab enim rem, debitis vero temporibus asperiores natus voluptas reiciendis, facere beatae officia ut nemo recusandae sunt optio dolores illo aliquid?</p>
+</body>
+</html>
