@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one{
+        width: 400px; height: 100px;
+        border: 3px solid black;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+    /* 여러 줄로 바꾸기 */
+    .review {
+        width: 400px; height: 100px;
+        border: 3px solid black;
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* 글자의 최대 라인 수 결정 */
+        -webkit-line-clamp: 2;
+
+        -webkit-box-orient: vertical;
+        /* 문단으로 끊어져서 줄바꿈 됨 */
+        word-break: keep-all;
+    }
+    /* 
+    -webkit은 크로스 브라우징을 위해 필요한데,
+    -webkit으 구글, 사파리 브라우저에서 사용 가능하다
+    크로스 브라우징 : 최대한 많은 종류의 웹 브라우저에서 정상적으로 작동하는 웹페이지를 만드는 방법
+    */
+
+</style>
+<body>
+    <div class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptas. Vitae error eligendi fuga porro saepe nostrum, veniam a dolores. Nam delectus nobis dolores voluptatem tenetur officia atque excepturi at!
+    </div>
+    <div class="review">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptas. Vitae error eligendi fuga porro saepe nostrum, veniam a dolores. Nam delectus nobis dolores voluptatem tenetur officia atque excepturi at!
+    </div>
+</body>
+</html>
