@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user_scale=no, minimun-scale=1.0">
+    <!-- <viewport content 속성>
+    width=device-width : 화면 너비 크기를 장치 스크린 너비 크기에 맞춤
+    initial-scale : 초기 줌 레벨 조절 비율(0~10:기본 1.0)
+    user-scale : 사용자가 화면 크기 조절 가능 여부(yes or no / 기본 = yes)
+    minimun-scale : 최소 축소 가능 비율 (0~10 / 기본 : 0.25)
+    maximun-scale : 최대 확대 가능 비율 (0~10 / 기본 : 5.0) 
+    ** minimun-scale, maximun-scale 모두 1로 하면 user-scale은 no와 같음 -->
+
+    <title>Document</title>
+    <style>
+        .top_bar{
+            background-color: red;
+            position: fixed;
+            left: 0; top: 0; right: 0;
+            height: 50px;
+        }
+        .left_bar{
+            background-color: blue;
+            position: fixed;
+            left: 0; top: 50px; bottom: 0;
+            width: 50px; 
+        }
+        .container{
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_bar"></div>
+    <div class="left_bar"></div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non obcaecati, saepe aliquam nulla voluptatem voluptatum libero doloremque inventore ullam veniam, magni illum, voluptates alias consequuntur quaerat praesentium hic! Numquam, culpa?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non obcaecati, saepe aliquam nulla voluptatem voluptatum libero doloremque inventore ullam veniam, magni illum, voluptates alias consequuntur quaerat praesentium hic! Numquam, culpa?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non obcaecati, saepe aliquam nulla voluptatem voluptatum libero doloremque inventore ullam veniam, magni illum, voluptates alias consequuntur quaerat praesentium hic! Numquam, culpa?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non obcaecati, saepe aliquam nulla voluptatem voluptatum libero doloremque inventore ullam veniam, magni illum, voluptates alias consequuntur quaerat praesentium hic! Numquam, culpa?</p>
+    </div>
+</body>
+</html>
