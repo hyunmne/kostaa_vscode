@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = [{name:'hong', age:20}, {name:'song', age:30}, {name:'gong', age:40}];
+        //for문으로 찍기
+        for(per of arr1) {
+            console.log(`이름:${per.name}, 나이:${per.age}`);
+        }
+
+        //** forEach
+        //배열이 가지고 있는 forEach메서드로 찍기
+        arr1.forEach(function(item, index, arr) {  //파라미터 중 안 쓰는 건 생략 가능
+            console.log(`순번:${index+1}, 이름:${per.name}, 나이:${per.age}`);
+        })
+
+        //** find
+        //배열의 데이터 중 첫번째 true로 반납된 데이터가 저장(이미 하나 찾았으면 나머지는 무시)
+        let song = arr1.find(item => item.name == 'song');
+        console.log(song);
+        
+        //** filter
+        //배열의 데이터 중 true로 반납된 데이터가 저장(모든 데이터를 필터링해서 전부 찾아냄)
+        let age30 = arr1.filter(function(item) {
+            return item.age>=30;
+        })
+        //화살표함수는 function과 return 생략 후 => 써주기
+        // let age30 = arr1.filter(item => item.age>=30);
+        console.log(age30);
+
+        //** map
+        //배열의 데이터를 가공해서 배열 갯수 만큼 저장
+        let arr2 = [{kor:80, eng:80, math:80}, {kor:70, eng:70, math:70}, {kor:90, eng:90, math:90}];
+        let avgs = arr2.map(function(item) {
+            return (item.kor + item.eng + item.math)/3;
+        })
+        console.log(avgs);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
