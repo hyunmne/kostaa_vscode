@@ -16,19 +16,21 @@
         }
         .row {
             height: 40px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
         }
         .title {
             font-weight: bold;
             background-color: lightgray;
-            border-bottom: 1px solid;
         }
         .cloumn {
-            width: 100px;
+            width: 98px;
             height: 100%;
             float: left;
             line-height: 40px;
             text-align: center;
-            
+            border-right: 1px solid;
+            border-left: 1px solid;
         }
     </style>
     <script>
@@ -41,15 +43,17 @@
         ]
         window.onload = function() {
             var container = document.getElementById("container");
-            var elemStr = "<div class = 'row'>"
+            var elemStr = "";
             accs.forEach((item, index) => 
-                elemStr += `<div class="cloumn">${index}</div>
+                elemStr += `<div class = 'row'>
+                            <div class="cloumn">${index}</div>
                             <div class="cloumn">${item.id}</div>
                             <div class="cloumn">${item.name}</div>
                             <div class="cloumn">${item.balance}</div>
                             <div class="cloumn">${item.type}</div>
-                            <div class="cloumn">${item.grade}</div>`)
-                elemStr += "</div>"
+                            <div class="cloumn">${item.grade}</div>
+                            </div>`)
+                // elemStr += "</div>"
                 container.innerHTML += elemStr;
         }
     </script>
