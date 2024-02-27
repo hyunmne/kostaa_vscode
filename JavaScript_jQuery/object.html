@@ -36,6 +36,18 @@
         // console.log(user);
         // let key = "name";
         // console.log(user[key]);
+
+        for (key in user) {
+            console.log(`${key}:${user[key]}`)
+        }
+
+        let arr2 = [10,20,30,40,50];
+        for (n of arr2) {   // n은 키 값을 가져옴.
+            console.log(n);
+        }
+        for (i in arr2) { // 배열일 때는 인덱스 순번을 가져옴
+            console.log(arr2[i])
+        }
     </script>
 </head>
 <body>

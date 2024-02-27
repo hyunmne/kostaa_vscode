@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user = {
+            name:'hong',
+            age:30
+        }
+        // 복제 
+        let per = {...user, addr:'Seoul'};  // 추가
+        console.log(per);
+        let per2 = {...user, name:'Park'};  // 변경
+        console.log(per2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
