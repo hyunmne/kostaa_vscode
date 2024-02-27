@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+        } 
+        .container {
+            margin: 0 auto;
+            border: 1px solid;
+            width: 600px;
+            /* padding: 10px; */
+        }
+        .row {
+            height: 40px;
+        }
+        .title {
+            font-weight: bold;
+            background-color: lightgray;
+            border-bottom: 1px solid;
+        }
+        .cloumn {
+            width: 100px;
+            height: 100%;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            
+        }
+    </style>
+    <script>
+        var accs = [
+            {id:'1001', name:'홍길동', balance:100000, type:'일반', grade:''},
+            {id:'1002', name:'김길동', balance:200000, type:'특수', grade:'VIP'},
+            {id:'1003', name:'고길동', balance:300000, type:'특수', grade:'Gold'},
+            {id:'1004', name:'송길동', balance:400000, type:'특수', grade:'Silver'},
+            {id:'1005', name:'하길동', balance:500000, type:'특수', grade:'Normal'}
+        ]
+        window.onload = function() {
+            var container = document.getElementById("container");
+            var elemStr = "<div class = 'row'>"
+            accs.forEach((item, index) => 
+                elemStr += `<div class="cloumn">${index}</div>
+                            <div class="cloumn">${item.id}</div>
+                            <div class="cloumn">${item.name}</div>
+                            <div class="cloumn">${item.balance}</div>
+                            <div class="cloumn">${item.type}</div>
+                            <div class="cloumn">${item.grade}</div>`)
+                elemStr += "</div>"
+                container.innerHTML += elemStr;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <div class="header"><h3>전체 계좌 조회</h3></div>
+        <div class="container" id="container">
+            <div class="row">
+                <div class="title cloumn">순서</div>
+                <div class="title cloumn">계좌번호</div>
+                <div class="title cloumn">이름</div>
+                <div class="title cloumn">입금액</div>
+                <div class="title cloumn">종류</div>
+                <div class="title cloumn">등급</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
