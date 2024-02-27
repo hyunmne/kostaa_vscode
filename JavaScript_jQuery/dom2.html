@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        var studs = [
+            { no: 1001, name: "코스타", grade: 3, major: "산업디자인" },
+            { no: 1001, name: "타스코", grade: 1, major: "인지심리학" },
+            { no: 1001, name: "음소거", grade: 2, major: "영상학과" },
+            { no: 1001, name: "참가자", grade: 4, major: "컴퓨터공학" },
+        ]
         // 브라우저가 모든 태그들의 element를 완성한 후에 자동으로 로드됨
-        window.onload = function() {
-            let element = document.getElementById("news");
-            console.log(element);
+        // window.onload = function() {
+        //     let element = document.getElementById("news");
+        //     console.log(element);
+        // }
+
+        window.onload = function () {
+            var tbody = document.querySelector("#table>tbody");
+            var stuStr = '';
+            for (stud of studs) {
+                stuStr += `<tr>
+                            <td>${stud.no}</td>
+                            <td>${stud.name}</td>
+                            <td>${stud.grade}</td>
+                            <td>${stud.major}</td>
+                        </tr>`
+            }
+            tbody.innerHTML = stuStr;
         }
     </script>
 </head>
+
 <body>
-    <div id="news"></div>
+    <!-- <div id="news"></div> -->
+    <table id="table" border="1">
+        <thead>
+            <th>학번</th>
+            <th>이름</th>
+            <th>학년</th>
+            <th>학과</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </body>
+
 </html>

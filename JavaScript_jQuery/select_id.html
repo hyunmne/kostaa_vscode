@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // getElementById, querySelector는 리턴 타입이 하나~ 
+            let header = document.getElementById("header");
+            // let header = document.querySelector("#header");
+            header.style.color = "orange";
+            header.style.background = 'red';
+            header.innerHTML = 'From Javascript'
+
+            // 리턴 타입이 배열 (여러 개) > 반복문 써서 적용한다.
+            let header1 = document.querySelectorAll("h1");
+            for(h of header1) {
+                h.style.color = 'blue';
+                h.style.background = 'skyblue';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 id="header">Header</h2>
+    <h2 id="header">Header</h2>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>
