@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 수학 : +, -, *, /, %, **
+        var n = 10**2;
+        console.log(n);
+
+        var name = "hong " + "gil dong";
+        console.log(name);
+
+        console.log(2+1+"2");
+        console.log(1+Number("2"));
+        console.log(1+(+"2")); // 2를 숫자로 바꿈...?
+
+        // 증감 연산자 : ++, --
+        // 비교 연산자 : &, |, ^, ~, >>, <<, >>>
+
+        // 대입 연산자 : =, +=, -=, *=, <<=, ...
+        // 비교 연산자 : ==, !=, <, <=, >, >=
+
+        console.log(0==false); // true, 자동 형변화 되어 비교
+        console.log(0===false); // false, 자료형까지 비교
+        console.log(null==undefined); // true
+        console.log(null===undefined); // false
+        console.log("apple">"banana"); // false
+
+        // 삼항 조건 연산자 : (조건식) ? 참명령문1 : 거짓명령문2
+        var age = 20;
+        var adult = (age>18) ? true : false;
+        console.log(adult);
+
+        // 논리 연산자 : ||(or), &&(and), !(not)
+
+        // ??(nullish 병합 연산자)
+        // a??b : a가 null도 아니고 undefined도 아니면 a, 그 외에는 b
+        // x = (a!==null && a!==undefined)? a : b;
+
+        var firstName = "황";
+        var lastName = null;
+        var nickName = "사막여우";
+       console.log(firstName ?? lastName ?? nickName);
+        // console.log(firstName || lastName || nickName);
+
+        var com = 10>'20';
+        // ||
+        // x = a||b : a가 null도 아니고 undefined도 아니고 0도 아니면 a, 그도 아니면 b
+        var res = 10 || 20 || 30; // ??와 달리 number 타입도 연산한다.
+        console.log(res);
+
+        var res2 = 0 ?? 0 ?? 30;
+        console.log(res2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
