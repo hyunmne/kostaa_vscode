@@ -16,6 +16,7 @@
             let txt = document.getElementById("num")
             txt.onkeydown = function (e) {
                 if (!e.key.match(numreg)) return false;
+                if(e.key.match(hanglereg)) return false;
             }
             txt.onkeyup = function () {
                 let num = this.value.replaceAll(',','');
