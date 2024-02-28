@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numreg = /^[0-9]+$/; // 숫자만 체크
+        let comareg = /\B(?=(\d{3})+(?!\d))/g 
+        let hanglereg = /^[가-힣]+$/  // 완성형 한글만 체크
+        let charreg = /^[가-힣a-zA-Z\s]+$/; // 완성형 한글과 영문 띄어쓰기 체크
+        let charexreg = /^[가-힣a-zA-Z\s,-#]+$/ // 완성형 한글 영문 띄어쓰기 특수문자 체크
+
+        window.onload = function () {
+            let txt = document.getElementById("num")
+            txt.onkeydown = function (e) {
+                if (!e.key.match(numreg)) return false;
+            }
+            txt.onkeyup = function () {
+                let num = this.value.replaceAll(',','');
+                this.value = num.replace(comareg, ',');
+            }
+
+            let hangle = document.getElementById("hangle")
+            hangle.onkeydown = function(e) {
+                if(e.key.match(hanglereg)) return false;
+            }
+
+            let char = document.getElementById("char")
+            char.onkeydown = function(e) {
+                if(!e.key.match(charreg)) return false;
+            }
+
+            let charex = document.getElementById("charex")
+            charex.onkeydown = function(e) {
+                if(!e.key.match(charexreg)) return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="num">
+    <input type="text" name="" id="hangle">
+    <input type="text" name="" id="char">
+    <input type="text" name="" id="charex"><br>
+</body>
+
+</html>
