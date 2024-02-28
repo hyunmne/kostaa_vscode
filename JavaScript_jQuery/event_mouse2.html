@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            let button = document.getElementById("button");
+            button.onclick = function(event) {
+                // 특정 키가 눌러졌는지 여부 확인
+                if(event.altKey && event.shiftKey) {
+                    alert("야호~!!!!");
+                } 
+                if (event.ctrlKey) {
+                    alert('메롱~');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button">Alt,Shift 키를 누른 상태에서 클릭해주세요.</button>
+</body>
+</html>

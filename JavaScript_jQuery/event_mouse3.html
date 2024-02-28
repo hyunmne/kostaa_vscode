@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let txt = document.getElementById("txt");
+            txt.onmousemove = function(e){
+                this.value = e.clientX+":"+e.clientY;
+            }
+
+            let dbspan = document.getElementById("dbspan");
+            dbspan.ondblclick = function() {
+                alert("dbclick");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="txt" value="Mouse over me"><br>
+    <span id="dbspan" onmousedown="return false">이 곳을 더블클릭 하세요.</span>
+    <div oncopy="alert('복사할 수 없습니다.'); return false">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam sint quibusdam expedita soluta sapiente error consequuntur quos beatae natus voluptatibus magnam earum nesciunt, optio nostrum. Ipsum voluptatum commodi expedita?
+    </div>
+</body>
+</html>
