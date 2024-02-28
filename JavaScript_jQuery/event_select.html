@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let button = document.querySelector("#button");
+            button.onclick = function() {
+                // 선택된 option의 value값만 가지고 온다.
+                // 배열 형태로 변경.. 
+                let selectedValues = Array.from(select.options)
+                                    .filter(option=>option.selected)  // 선택된 것
+                                    .map(option=>option.value);   // 선택된 것의 값만 갖고 옴.  
+                console.log(selectedValues);
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select" multiple>
+        <option value="blues">Blues</option>
+        <option value="rock">Rock</option>
+        <option value="classic">Classic</option>
+    </select>
+    <button id="button">선택</button>
+</body>
+</html>
