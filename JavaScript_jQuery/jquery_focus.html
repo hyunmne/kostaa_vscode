@@ -12,7 +12,13 @@
                     $("#jumin2").focus();
                 }
             })
-           
+           $("#jumin2").keyup(function(){
+                console.log(e.key);
+                console.log(e.keyCode);
+                if(e.key == 'BackSpace' && $(this).val().length == 0){
+                    $("#jumin1").focus();
+                }
+           })
         })
     </script>
 </head>
