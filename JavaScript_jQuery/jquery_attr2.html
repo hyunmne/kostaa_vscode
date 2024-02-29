@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $("img").attr({
+                alt:'JQuery 라이브러리 사용한 속성 지정',
+                src:function(index){
+                    var size = (index+1)*100;
+                    return 'http://placehold.it/'+size+'x100';
+                }
+            })
+            $("img").css("margin",10);
+            $("#div1").html('<h1>HTML</h1>'); // innerHTML
+            $("#div2").text('<h1>HTML</h1>'); // innerText
+
+            // let div1 = document.getElementById("div1");
+            // // innerHTML : text로 인식하지 않고, HTML 태그로 인식함.
+            // div1.innerHTML = '<h1>HTML</h1>'; 
+            // let div2 = document.getElementById("div2");
+            // // innerText : text로 인식함.
+            // div2.innerText = '<h1>HTML</h1>';
+        })
+
+    </script>
+</head>
+<body>
+    <img src="" alt=""><br>
+    <img src="" alt=""><br>
+    <img src="" alt="">
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>
