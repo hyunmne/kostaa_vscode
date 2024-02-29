@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .header {
+            text-align: center;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            /* border: 1px solid; */
+            width: 600px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var accs = [
+            { id: '1001', name: '홍길동', balance: 100000, type: '일반', grade: '' },
+            { id: '1002', name: '김길동', balance: 200000, type: '특수', grade: 'VIP' },
+            { id: '1003', name: '고길동', balance: 300000, type: '특수', grade: 'Gold' },
+            { id: '1004', name: '송길동', balance: 400000, type: '특수', grade: 'Silver' },
+            { id: '1005', name: '하길동', balance: 500000, type: '특수', grade: 'Normal' }
+        ]
+
+        $(function () {
+            accs.forEach(function (item, index) {
+                let tr = $('<tr></tr>');
+                $('<td></td>').text(index).appendTo(tr);
+                $('<td></td>').text(item.id).appendTo(tr);
+                $('<td></td>').text(item.name).appendTo(tr);
+                $('<td></td>').text(item.balance).appendTo(tr);
+                $('<td></td>').text(item.type).appendTo(tr);
+                $('<td></td>').text(item.grade).appendTo(tr);
+                $('tbody').append(tr);
+
+            })
+        }); 
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <div class="container mt-3">
+            <h4 class="header">전체 계좌 조회</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>순서</th>
+                        <th>계좌번호</th>
+                        <th>이름</th>
+                        <th>잔액</th>
+                        <th>종류</th>
+                        <th>등급</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
