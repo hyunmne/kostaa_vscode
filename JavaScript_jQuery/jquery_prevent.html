@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $('a').click(function(e){
+                console.log("click");
+                e.preventDefault();
+            })
+            $("#form").submit(function(){
+                let name = $("input[name='name']").val();
+                if(name.replace(/[가-힣]/g,'').length==0) {
+                    alert("한글만 입력하세요.");
+                    e.preventDefault();
+                }
+                let age = +$("input[name='age']").val();
+                if (age<0) {
+                    alert("나이를 다시 입력해주세요.");
+                    e.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="index2.html">네이버</a>
+    <form action="index2.html" id="form">
+        <input type="text" name="name" required>
+        <input type="text" name="address" required>
+        <input type="text" name="age" required>
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>
